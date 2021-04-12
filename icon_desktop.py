@@ -8,13 +8,13 @@ def get_username():
 def create_file():
 	username = get_username()
 	try:
-		a = open(f'/home/{username}/.local/share/applications/teste.desktop', 'r')
+		a = open(f'/home/{username}/.local/share/applications/Xamp.desktop', 'r')
 	except FileNotFoundError:
-		a = open(f'/home/{username}/.local/share/applications/teste.desktop', 'w')
-		a.write('''
+		a = open(f'/home/{username}/.local/share/applications/Xamp.desktop', 'w')
+		a.write(f'''
 	[Desktop Entry]
-	Name=Teste
-	Exec=python3 /home/xamp/init.py
+	Name=Xamp
+	Exec=python3 /home/{username}/xamp/init.py
 	Comment=
 	Terminal=false
 	Icon=/opt/lampp/htdocs/favicon.ico
